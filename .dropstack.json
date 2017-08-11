@@ -1,0 +1,9 @@
+{
+  "variables": "",
+  "instances": 1,
+  "alias": "docs.cloud.dropstack.run",
+  "type": "npm",
+  "excludes": [],
+  "name": "ulrgazvr",
+  "serviceUrl": "ulrgazvr.cloud.dropstack.run"
+}
