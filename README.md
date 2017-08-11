@@ -2,5 +2,7 @@
 
 ## Documentation
 
-* [Intro](docs/intro.md)
-* [Get started](docs/get-started.md)
+* [Getting started](docs/getting-started.md)
+* [Examples](docs/examples.md)
+* [Features](docs/features.md)
+* [Deployment Types](docs/deployment-types.md)
