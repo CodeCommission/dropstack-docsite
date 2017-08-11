@@ -35,6 +35,7 @@ const NavigationLink = styled.a`
 const TopNavigationImage = styled.img`
   color: white;
   height: 24px;
+  width: 24px;
   margin-top: 8px;
   margin-left: 8px;
 `
