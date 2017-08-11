@@ -11,29 +11,32 @@ const StyledLayout = styled.div`
 `
 
 const TopNavigationContainer = styled.div`
-  min-height: 60px;
+  min-height: 44px;
 `
 
 const NavigationLink = styled.a`
   color: white;
   text-decoration: none;
-  padding: 16px;
-  text-align: center;
+  margin: 12px;
+  margin-top: 0px;
+  text-align: left;
   vertical-align: middle;
   display: inline-block;
+  font-size: 12px;
 
   :visited {
     color: white;
   }
   :hover {
-    color: white;
+    color: #e4a5f0;
   }
 `
 
-const TopNavigationTitle = styled.h1`
+const TopNavigationImage = styled.img`
   color: white;
-  display: inline-block;
-  margin: -5px;
+  height: 24px;
+  margin-top: 8px;
+  margin-left: 8px;
 `
 
 const TopNavigation = styled.nav`
@@ -47,6 +50,7 @@ const TopNavigation = styled.nav`
 
 const TopNavigationList = styled.ul`
   list-style-type: none;
+  display: inline-flex;
   margin: 0;
   padding: 0;
 `
@@ -57,6 +61,14 @@ const TopNavigationListItem = styled.li`
 
 const ContentContainer = styled.div`
   color: black;
+  margin-left: 11px;
+  margin-right: 11px;
+  @media (min-width: 375px) and (max-width: 420px) {
+    margin-top: 45px;
+  }
+  @media (max-width: 375px) {
+    margin-top 60px;
+  }
 `
 
 export default class Layout extends React.Component {
@@ -73,12 +85,12 @@ export default class Layout extends React.Component {
         />
         <TopNavigationContainer>
           <TopNavigation>
+            <a href="/"><TopNavigationImage src="/dropstack.svg" /></a>
             <TopNavigationList>
-              <TopNavigationListItem><TopNavigationTitle><NavigationLink href={'/'}>Documentation</NavigationLink></TopNavigationTitle></TopNavigationListItem>
-              <TopNavigationListItem><NavigationLink href={'/docs/getting-started'}>/getting-started</NavigationLink></TopNavigationListItem>
-              <TopNavigationListItem><NavigationLink href={'/docs/examples'}>/examples</NavigationLink></TopNavigationListItem>
-              <TopNavigationListItem><NavigationLink href={'/docs/features'}>/features</NavigationLink></TopNavigationListItem>
-              <TopNavigationListItem><NavigationLink href={'/docs/deployment-types'}>/deployment-types</NavigationLink></TopNavigationListItem>
+              <TopNavigationListItem><NavigationLink href={'/docs/getting-started'}>getting-started</NavigationLink></TopNavigationListItem>
+              <TopNavigationListItem><NavigationLink href={'/docs/examples'}>examples</NavigationLink></TopNavigationListItem>
+              <TopNavigationListItem><NavigationLink href={'/docs/features'}>features</NavigationLink></TopNavigationListItem>
+              <TopNavigationListItem><NavigationLink href={'/docs/deployment-types'}>deployment-types</NavigationLink></TopNavigationListItem>
               <TopNavigationListItem right></TopNavigationListItem>
             </TopNavigationList>
           </TopNavigation>

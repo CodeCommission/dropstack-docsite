@@ -5,7 +5,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        slsls
+        <h1>dropstack documentation</h1>
       </div>
     )
   }
