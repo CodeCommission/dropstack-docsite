@@ -1,4 +1,0 @@
-# dropstack documentation
-
-* first
-* second

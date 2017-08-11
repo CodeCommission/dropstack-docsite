@@ -17,11 +17,6 @@ export default class Docs extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <StyledTitle>docs</StyledTitle>
-        <Markdown source={this.props.source} />
-      </div>
-    )
+    return <Markdown source={this.props.source} />
   }
 }
