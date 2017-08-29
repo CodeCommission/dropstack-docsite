@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
+import appPackage from '../package.json'
 
 const StyledLayout = styled.div`
   font-family: Consolas, monaco, monospace;
@@ -54,10 +55,16 @@ const TopNavigationList = styled.ul`
   display: inline-flex;
   margin: 0;
   padding: 0;
+  width: 95%;
 `
 
 const TopNavigationListItem = styled.li`
-  float: ${props => props.right ? 'right' : 'left'};
+  width: ${props => props.fullSize ? '100%' : 'none'};
+`
+
+const AppInfo = styled.div`
+  float: right;
+  font-size: 8px;
 `
 
 const ContentContainer = styled.div`
@@ -92,7 +99,7 @@ export default class Layout extends React.Component {
               <TopNavigationListItem><NavigationLink href={'/docs/examples'}>examples</NavigationLink></TopNavigationListItem>
               <TopNavigationListItem><NavigationLink href={'/docs/features'}>features</NavigationLink></TopNavigationListItem>
               <TopNavigationListItem><NavigationLink href={'/docs/deployment-types'}>deployment-types</NavigationLink></TopNavigationListItem>
-              <TopNavigationListItem right></TopNavigationListItem>
+              <TopNavigationListItem fullSize><AppInfo>{appPackage.name} v{appPackage.version}</AppInfo></TopNavigationListItem>
             </TopNavigationList>
           </TopNavigation>
         </TopNavigationContainer>

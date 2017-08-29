@@ -1,8 +1,8 @@
 {
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "dropstack-docsite",
-  "description": "Dropstack documentation website",
+  "description": "DropStack documentation website",
   "engines": {
     "node": "^6"
   },
